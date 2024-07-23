@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root {
+    font-size: clamp(40%, 1% + 2vw , 62.5%);
+}
+body {
+    background: #121214;
+    color: #F8F8FC;
+
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+.light{
+    background:#F8F8FC;
+    color: #121214;
+}
+body:not(.light) .ph-moon,
+body.light .ph-sun {
+    display: none;
+}
+
+.ph-moon {
+    color: #0c0c0c;
+  
+}
+.ph-sun{
+ color: #F8F8FC;
+ 
+}
+#toggle-mode {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    font-size: 3.2rem;
+    line-height: 0;
+    
+}
+#app {
+    display: grid;
+    justify-items: center;
+}
+.flex {
+    display: flex;
+
+}
+#timer {
+    font-size: 9.6rem;
+    font-weight: bold;
+    font-family: sans-serif;
+
+}
+#controls {
+    margin-top: 1.6rem;
+    padding: 2.2rem 4rem;
+    gap: 1.6rem;
+    border-radius: 9999px;
+    background: #242424;
+
+
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    border: 0;
+    appearance: none;
+
+}
+button{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 6.4rem;
+}
+.primary {
+    color: #42D3FF;
+
+}
+.secondary {
+    color: white;
+}
+.running .ph-play-circle,
+.running .ph-timer,
+.music-on .ph-speaker-none,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-high
+{
+    display: none;
+}
